@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Joe's Hot Dog Stand</title>
+
+<style type="text/css">
+	
+body {
+  background-color: rgba(255, 99, 71, 0.5);
+}
+
+h1 {text-align: center; font-size: 80px; font-family: Arial, Helvetica, sans-serif;}
+
+</style>
+</head>
+<body>
+
+<h1>Welcome To Joe's HotDog Stand!</h1>
+
+<script language='javascript'>
+
+hot_dogs = 3.25;
+french_fries = 2.00;
+drinks = 1.50;
+var discount = 0;
+
+var item1 = parseInt (prompt ("How many hot dogs do you want to buy?", "0"));
+var item2 = parseInt (prompt ("How many french fries do you want to buy?", "0"));
+var item3 = parseInt (prompt ("How many drinks do you want to buy?", "0"));
+
+total = ((hot_dogs * item1) + (french_fries * item2) + (drinks * item3));
+
+if (total >= 20.00)
+{
+	discount = (.1 * total);
+	total = (.9 * total);
+}
+
+tax = (.0625 * total);
+
+new_total = (total - tax);
+
+
+document.write (" Items Ordered: " + item1 + " hot dogs, " + item2 + " french fries, " + item3 + " drinks");
+document.write ("<br>");
+document.write ("Subtotal: $" + total);
+document.write ("<br>"); 
+document.write ("Discount: $" + discount.toFixed(2));
+document.write ("<br>");
+document.write ("Tax: $" + tax.toFixed(2));
+document.write ("<br>");
+document.write ("Total: $" + new_total.toFixed(2));
+document.write ("<br>");
+
+
+</script>
+</body>
+</html>
+
